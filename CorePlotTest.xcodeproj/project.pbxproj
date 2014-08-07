@@ -12,6 +12,7 @@
 		887F2AF019933EFD00621547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887F2AEE19933EFD00621547 /* Main.storyboard */; };
 		887F2AF219933EFD00621547 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 887F2AF119933EFD00621547 /* Images.xcassets */; };
 		887F2AFE19933EFD00621547 /* CorePlotTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2AFD19933EFD00621547 /* CorePlotTestTests.swift */; };
+		D1C07FA2396746B6A0C1FD32 /* libPods-CorePlotTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD11118DCDDC48DDBE514E1F /* libPods-CorePlotTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,9 @@
 		887F2AF719933EFD00621547 /* CorePlotTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorePlotTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		887F2AFC19933EFD00621547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		887F2AFD19933EFD00621547 /* CorePlotTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorePlotTestTests.swift; sourceTree = "<group>"; };
+		887F2B071993416600621547 /* CorePlotTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CorePlotTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF525DC79B534B92B495B4A4 /* Pods-CorePlotTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorePlotTest.xcconfig"; path = "Pods/Pods-CorePlotTest.xcconfig"; sourceTree = "<group>"; };
+		DD11118DCDDC48DDBE514E1F /* libPods-CorePlotTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CorePlotTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C07FA2396746B6A0C1FD32 /* libPods-CorePlotTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181DB2195D804DEC8195AF51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD11118DCDDC48DDBE514E1F /* libPods-CorePlotTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		887F2ADC19933EFD00621547 = {
 			isa = PBXGroup;
 			children = (
 				887F2AE719933EFD00621547 /* CorePlotTest */,
 				887F2AFA19933EFD00621547 /* CorePlotTestTests */,
 				887F2AE619933EFD00621547 /* Products */,
+				BF525DC79B534B92B495B4A4 /* Pods-CorePlotTest.xcconfig */,
+				181DB2195D804DEC8195AF51 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +95,7 @@
 				887F2AEE19933EFD00621547 /* Main.storyboard */,
 				887F2AF119933EFD00621547 /* Images.xcassets */,
 				887F2AE819933EFD00621547 /* Supporting Files */,
+				887F2B071993416600621547 /* CorePlotTest-Bridging-Header.h */,
 			);
 			path = CorePlotTest;
 			sourceTree = "<group>";
@@ -116,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 887F2B0119933EFD00621547 /* Build configuration list for PBXNativeTarget "CorePlotTest" */;
 			buildPhases = (
+				B97268B45FD147A08C1227B5 /* Check Pods Manifest.lock */,
 				887F2AE119933EFD00621547 /* Sources */,
 				887F2AE219933EFD00621547 /* Frameworks */,
 				887F2AE319933EFD00621547 /* Resources */,
+				B53FB44670FF41728DA6FFF7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +221,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B53FB44670FF41728DA6FFF7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CorePlotTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B97268B45FD147A08C1227B5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		887F2AE119933EFD00621547 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -281,6 +332,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "CorePlotTest/CorePlotTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -316,12 +368,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "CorePlotTest/CorePlotTest-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		887F2B0219933EFD00621547 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF525DC79B534B92B495B4A4 /* Pods-CorePlotTest.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -333,6 +387,7 @@
 		};
 		887F2B0319933EFD00621547 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF525DC79B534B92B495B4A4 /* Pods-CorePlotTest.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -357,6 +412,7 @@
 				INFOPLIST_FILE = CorePlotTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CorePlotTest.app/CorePlotTest";
 			};
 			name = Debug;
@@ -372,6 +428,7 @@
 				INFOPLIST_FILE = CorePlotTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CorePlotTest.app/CorePlotTest";
 			};
 			name = Release;
@@ -395,6 +452,7 @@
 				887F2B0319933EFD00621547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		887F2B0419933EFD00621547 /* Build configuration list for PBXNativeTarget "CorePlotTestTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +461,7 @@
 				887F2B0619933EFD00621547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
