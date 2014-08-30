@@ -12,6 +12,7 @@
 		887F2AF019933EFD00621547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887F2AEE19933EFD00621547 /* Main.storyboard */; };
 		887F2AF219933EFD00621547 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 887F2AF119933EFD00621547 /* Images.xcassets */; };
 		887F2AFE19933EFD00621547 /* CorePlotTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2AFD19933EFD00621547 /* CorePlotTestTests.swift */; };
+		8898C79319B1523F00981FAD /* CPTMutablePlotRange+SwiftCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8898C79219B1523F00981FAD /* CPTMutablePlotRange+SwiftCompat.m */; };
 		D1C07FA2396746B6A0C1FD32 /* libPods-CorePlotTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD11118DCDDC48DDBE514E1F /* libPods-CorePlotTest.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		887F2AFC19933EFD00621547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		887F2AFD19933EFD00621547 /* CorePlotTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorePlotTestTests.swift; sourceTree = "<group>"; };
 		887F2B071993416600621547 /* CorePlotTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CorePlotTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		8898C79119B1523F00981FAD /* CPTMutablePlotRange+SwiftCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPTMutablePlotRange+SwiftCompat.h"; sourceTree = "<group>"; };
+		8898C79219B1523F00981FAD /* CPTMutablePlotRange+SwiftCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CPTMutablePlotRange+SwiftCompat.m"; sourceTree = "<group>"; };
 		BF525DC79B534B92B495B4A4 /* Pods-CorePlotTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CorePlotTest.xcconfig"; path = "Pods/Pods-CorePlotTest.xcconfig"; sourceTree = "<group>"; };
 		DD11118DCDDC48DDBE514E1F /* libPods-CorePlotTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CorePlotTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +95,8 @@
 			children = (
 				887F2AEA19933EFD00621547 /* AppDelegate.swift */,
 				887F2AEC19933EFD00621547 /* ViewController.swift */,
+				8898C79119B1523F00981FAD /* CPTMutablePlotRange+SwiftCompat.h */,
+				8898C79219B1523F00981FAD /* CPTMutablePlotRange+SwiftCompat.m */,
 				887F2AEE19933EFD00621547 /* Main.storyboard */,
 				887F2AF119933EFD00621547 /* Images.xcassets */,
 				887F2AE819933EFD00621547 /* Supporting Files */,
@@ -260,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				887F2AED19933EFD00621547 /* ViewController.swift in Sources */,
+				8898C79319B1523F00981FAD /* CPTMutablePlotRange+SwiftCompat.m in Sources */,
 				887F2AEB19933EFD00621547 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,9 +385,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CorePlotTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -391,6 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CorePlotTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
