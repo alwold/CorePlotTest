@@ -22,6 +22,14 @@ class ViewController: UIViewController, CPTPlotDataSource {
         plot.dataSource = self
         graph.addPlot(plot)
 
+        var plotSpace = graph.defaultPlotSpace as CPTXYPlotSpace
+        var xRange = plotSpace.xRange.mutableCopy() as CPTMutablePlotRange
+        var yRange = plotSpace.yRange.mutableCopy() as CPTMutablePlotRange
+        xRange.setLengthFloat(10)
+        yRange.setLengthFloat(10)
+        plotSpace.xRange = xRange
+        plotSpace.yRange = yRange
+        
         self.graphView.hostedGraph = graph
     }
     
