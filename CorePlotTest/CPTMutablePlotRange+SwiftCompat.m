@@ -12,12 +12,8 @@
 
 - (void)setLengthFloat:(float)lengthFloat
 {
-    NSLog(@"length is first %@", [NSDecimalNumber decimalNumberWithDecimal:self.length]);
     NSNumber *number = [NSNumber numberWithFloat:lengthFloat];
-    NSLog(@"setting length: %@", number);
     [self setLength:[number decimalValue]];
-    NSLog(@"length is now %@", [NSDecimalNumber decimalNumberWithDecimal:self.length]);
-    NSLog(@"or %f", self.lengthDouble);
 }
 
 @end
